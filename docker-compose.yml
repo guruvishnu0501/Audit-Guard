@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # The Brain: Local LLM Inference
+  ollama:
+    image: ollama/ollama:latest
+    container_name: auditguard_brain
+    volumes:
+      - ./models:/root/.ollama # Persist models locally
+    ports:
+      - "11434:11434"
+    networks:
+      - auditguard-net
+
+  # The Interface: Streamlit App
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile.streamlit
+    container_name: auditguard_ui
+    depends_on:
+      - ollama
+    volumes:
+      - ./src:/app/src # Live code editing
+      - ./data:/app/data # Shared data volume
+    ports:
+      - "8501:8501"
+    environment:
+      - OLLAMA_HOST=http://ollama:11434
+    networks:
+      - auditguard-net
+
+networks:
+  auditguard-net:
+    driver: bridge

@@ -1,0 +1,9 @@
+pandas
+numpy
+openpyxl
+streamlit
+watchdog
+pdfplumber
+ollama
+networkx
+matplotlib
