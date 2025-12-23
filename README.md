@@ -56,12 +56,13 @@ AuditGuard/
 │   └── main.py                # CLI version of the tool
 ├── requirements.txt           # Python dependencies
 └── README.md                  # Documentation
-
+```
 ---
 
 ## ⚙️ Installation & Setup
 
 ### 1. Clone the Repository
-```bash
+```
 git clone [https://github.com/yourusername/AuditGuard.git](https://github.com/yourusername/AuditGuard.git)
 cd AuditGuard
+```
