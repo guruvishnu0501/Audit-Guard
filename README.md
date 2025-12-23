@@ -66,3 +66,42 @@ AuditGuard/
 git clone [https://github.com/yourusername/AuditGuard.git](https://github.com/yourusername/AuditGuard.git)
 cd AuditGuard
 ```
+## 2. Set up Virtual Environment
+```
+python -m venv .venv
+# Windows
+.\.venv\Scripts\activate
+# Mac/Linux
+source .venv/bin/activate
+
+```
+## 3. Install Dependencies
+```
+pip install -r requirements.txt
+```
+## Note: You also need to install Graphviz on your system and add it to your System PATH to generate the linkage maps.
+
+## 4. Install & Run Llama 3.2 (Required for PDF features)
+## Download Ollama and run the following command in your terminal to download the model:
+```
+ollama pull llama3.2
+```
+
+## 🏃‍♂️ How to Run
+
+## 1. Navigate to the source directory:
+```
+cd src
+```
+
+## 2. Launch the web application:
+```
+streamlit run app.py
+```
+## 3.Use the Dashboard:
+
+##   Upload CSV/Excel: For analyzing bulk transaction logs.
+
+##   Upload PDF: To test the AI extraction on scanned invoices.
+
+##   The dashboard will automatically display the Violation Summary, Suspicious Transactions Table, and the Fraud Linkage Map.
