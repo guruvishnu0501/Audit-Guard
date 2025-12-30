@@ -7,3 +7,4 @@ pdfplumber
 ollama
 networkx
 matplotlib
+grafhviz
