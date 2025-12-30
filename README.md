@@ -63,7 +63,7 @@ AuditGuard/
 
 ### 1. Clone the Repository
 ```
-git clone (https://github.com/guruvishnu0501/Audit-Guard.git)
+git clone https://github.com/guruvishnu0501/Audit-Guard.git
 cd AuditGuard
 ```
 ## 2. Set up Virtual Environment
